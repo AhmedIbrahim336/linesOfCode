@@ -13,3 +13,9 @@ class bcolors:
     ENDC = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
+
+def cprint(text, mode = None):
+    print(f"{bcolors.BOLD}{text}{bcolors.ENDC}")
+
+
+cprint("helloWorld")
