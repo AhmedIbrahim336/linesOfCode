@@ -1,0 +1,14 @@
+[
+  {
+    "name": "TODO",
+    "description": "Build Awesome todo app",
+    "tags": ["HTML", "JS"],
+    "stack": { "HTML": 12, "CSS": 3, "JS": 1 }
+  },
+  {
+    "name": "Quick",
+    "description": "Some awesome description here",
+    "tags": ["HTML", "JS"],
+    "stack": { "JS": 1 }
+  }
+]
