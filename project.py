@@ -1,6 +1,7 @@
 import os 
 import pathlib
 import json
+from pprint import pprint
 
 from constants import ROOT_DIR
 from utils import is_default_file, get_file_type
@@ -22,9 +23,7 @@ def project_metadata(project):
 def analizeProject(project: str):
     project_path = pathlib.Path(os.path.join(ROOT_DIR, project))
     project_files = os.listdir(project_path)
-    
     result = {}
-
     for file in project_files:
         file_path = pathlib.Path(os.path.join(project_path, file))
 
@@ -41,4 +40,31 @@ def analizeProject(project: str):
                 result[file_type] = num_of_lines
     return result
 
+def get_stats(projects):
+    """
+    Stats should include:
+    1. Total lines of each tech 
+    2. Percentage of each tech from the total stacked projects 
+    3. Percentage of each tech from the each project 
+    """
 
+    freq_counter = dict()
+    for project in projects:
+        project_total_lines = 0
+        for tech, lines in project.get('stack', {}).items():
+            project_total_lines+=lines
+            if freq_counter.get(tech, None):
+                freq_counter[tech]+=lines
+            else:
+                 freq_counter[tech]=lines
+        # Print stats for each project
+        project_stat_str = ''
+        for tech, lines in project.get('stack', {}).items():
+            lines_per = (lines/project_total_lines) * 100
+            project_stat_str+= '%.1f%% %s | ' % (lines_per, tech)
+        
+        print(project['name'], ":" , project_stat_str)
+
+    
+    pprint(freq_counter)
+    

@@ -1,5 +1,3 @@
-import os 
-
 from constants import DEFAULT_FILES, bcolors
 
 
@@ -17,7 +15,7 @@ def display_project(metadata):
     # Todo: all of these values are optional so need to be validated
     tags = ', '.join((metadata['tags']))
     stacks = ', '.join(metadata.get('stack', {}).keys())
-    print(f"{bcolors.BOLD}Name: {metadata['name']}{bcolors.ENDC}")
+    print(f"{bcolors.HEADER}Name: {metadata['name']}{bcolors.ENDC}")
     print(f"{bcolors.BOLD}Description: {metadata['description']}{bcolors.ENDC}")
     print(f"{bcolors.BOLD}Name: {tags}{bcolors.ENDC}")
     print(f"{bcolors.BOLD}Tech Stack: {stacks} {bcolors.ENDC}")
