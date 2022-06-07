@@ -12,7 +12,7 @@ def project_metadata(project):
 
     if not path.exists():
         print('%s doesn\'t have project.json file!')
-        return
+        return dict()
     
     with open(project_json, 'rt') as f:
         json_str = f.read()

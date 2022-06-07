@@ -3,12 +3,24 @@
     "name": "TODO",
     "description": "Build Awesome todo app",
     "tags": ["HTML", "JS"],
-    "stack": { "HTML": 12, "CSS": 3, "JS": 1 }
+    "stack": { "HTML": 120, "CSS": 30, "JS": 1002 }
   },
   {
     "name": "Quick",
-    "description": "Some awesome description here",
-    "tags": ["HTML", "JS"],
-    "stack": { "JS": 1 }
+    "description": "Quick a web based timer!",
+    "tags": ["TIMER", "JS"],
+    "stack": { "JS": 100, "PY": 200, "HTML": 303, "CSS": 200 }
+  },
+  {
+    "name": "C programming lang.",
+    "description": "C is a low level language that can deal with the hardware",
+    "tags": ["HW", "low-level", "C"],
+    "stack": { "C": 900 }
+  },
+  {
+    "name": "Rust",
+    "description": "Rust is a low level programming lang.",
+    "tags": ["Micro-controllers", "RUST"],
+    "stack": { "RS": 9090 }
   }
 ]
