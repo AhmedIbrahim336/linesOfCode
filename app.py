@@ -8,3 +8,5 @@ projects_list = os.listdir(ROOT_DIR)
 for project in projects_list:
     metadata = project_metadata(project)
     result = analizeProject(project)
+    metadata['stack'] = result
+    pprint(metadata)
