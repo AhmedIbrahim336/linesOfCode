@@ -6,6 +6,6 @@ the main of this tool is to analize projects and provide useful matrics to quant
 
 ## TODOs
 
-- [ ] Format projects when displaying in the terminal
+- [x] Format projects when displaying in the terminal
 - [ ] Add colors
 - [ ] Add global stats
