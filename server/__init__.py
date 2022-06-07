@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask
+from flask import Flask, url_for
 
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
@@ -26,5 +26,8 @@ def create_app(test_config=None):
     # Commands 
     from . import db
     db.init_app(app)
-    
+    # Blue Prints 
+    from . import project
+    app.register_blueprint(project.bp)
+
     return app
