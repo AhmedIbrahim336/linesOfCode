@@ -1,6 +1,4 @@
-import functools
 from flask import Blueprint, request, current_app
-import json
 from server.db import get_db
 
 bp = Blueprint('projects', __name__, url_prefix='/projects')
