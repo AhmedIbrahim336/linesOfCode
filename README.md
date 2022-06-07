@@ -13,5 +13,5 @@ the main of this tool is to analize projects and provide useful matrics to quant
 
 - [x] Format projects when displaying in the terminal
 - [x] Add colors
-- [ ] Add global stats
+- [x] Add global stats
 - [ ] Introduce flat design
