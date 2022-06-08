@@ -13,7 +13,6 @@ def init():
         metadata = project_metadata(project)
         result = analizeProject(project)
         metadata['stack'] = result
-        print(metadata)
         display_project(metadata)
         projects.append(metadata)
     
